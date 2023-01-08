@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Add Category</h2>
+                    <h2 class="admin-heading">اضافه کردن دسته بندی</h2>
                 </div>
                 <div class="offset-md-7 col-md-2">
-                    <a class="add-new" href="{{ route('categories') }}">All Categories</a>
+                    <a class="add-new" href="{{ route('categories') }}">لیست دسته بندی ها</a>
                 </div>
             </div>
             <div class="row">
@@ -15,7 +15,7 @@
                     <form class="yourform" action="{{ route('category.store') }}" method="post" autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Category Name</label>
+                            <label>نام دسته بندی</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
                                 placeholder="Category Name" name="name" value="{{ old('name') }}" required>
                             @error('name')
@@ -24,7 +24,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="save" required>
+                        <input type="submit" name="save" class="btn btn-danger" value="ثبت" required>
                     </form>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
 
 <head>
     <meta charset="utf-8">
@@ -25,11 +25,11 @@
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Hi {{ auth()->user()->name }}
+                            سلام {{ auth()->user()->name }}
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{ route('change_password') }}">Change Password</a>
-                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">Log Out</a>
+                            <a class="dropdown-item" href="{{ route('change_password') }}">تغییر کلمه عبور</a>
+                            <a class="dropdown-item" href="#" onclick="document.getElementById('logoutForm').submit()">خروج</a>
                         </div>
                         <form method="post" id="logoutForm" action="{{ route('logout') }}">
                             @csrf
@@ -45,15 +45,15 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="menu">
-                        <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li><a href="{{ route('authors') }}">Authors</a></li>
-                        <li><a href="{{ route('publishers') }}">Publishers</a></li>
-                        <li><a href="{{ route('categories') }}">Categories</a></li>
-                        <li><a href="{{ route('books') }}">Books</a></li>
-                        <li><a href="{{ route('students') }}">Reg Students</a></li>
-                        <li><a href="{{ route('book_issued') }}">Book Issue</a></li>
-                        <li><a href="{{ route('reports') }}">Reports</a></li>
-                        <li><a href="{{ route('settings') }}">Settings</a></li>
+                        <li><a href="{{ route('dashboard') }}">داشبورد</a></li>
+                        <li><a href="{{ route('authors') }}">نویسنده ها</a></li>
+                        <li><a href="{{ route('publishers') }}">ناشرین</a></li>
+                        <li><a href="{{ route('categories') }}">دسته بندی ها</a></li>
+                        <li><a href="{{ route('books') }}">کتابخانه</a></li>
+                        <li><a href="{{ route('students') }}">دانشجو ها</a></li>
+                        <li><a href="{{ route('book_issued') }}">امانت کتاب </a></li>
+                        <li><a href="{{ route('reports') }}">گزارشات</a></li>
+                        <li><a href="{{ route('settings') }}">تنظیمات</a></li>
                     </ul>
                 </div>
             </div>
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <span>© Copyright 2021 <a href="https://www.yahoobaba.net">YahooBaba 😎</a></span>
+                    <span>© کپی رایت برای  <a href="https://www.yahoobaba.net">دانشگاه شهید چمران اهواز 😎</a> محفوظ است</span>
                 </div>
             </div>
         </div>

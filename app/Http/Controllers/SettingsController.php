@@ -15,7 +15,7 @@ class SettingsController extends Controller
      */
     public function index()
     {
-        return view('settings',['data' => settings::latest()->first()]);
+        return view('settings', ['data' => settings::latest()->first()]);
     }
 
 

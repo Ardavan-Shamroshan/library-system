@@ -39,7 +39,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-danger" value="Update" required>
+                        <input type="submit" class="btn btn-danger" value="ویرایش" required>
                     </form>
                 </div>
             </div>

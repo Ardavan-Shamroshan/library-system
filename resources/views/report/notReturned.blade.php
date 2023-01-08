@@ -13,13 +13,13 @@
                         <table class="content-table">
                             <thead>
                                 <th>S.No</th>
-                                <th>Student Name</th>
-                                <th>Book Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Issue Date</th>
-                                <th>Return Date</th>
-                                <th>Over Days</th>
+                                <th>دانشجو</th>
+                                <th>کتاب</th>
+                                <th>تلفن</th>
+                                <th>ایمیل</th>
+                                <th>زمان امانت</th>
+                                <th>زمان برگشت</th>
+                                <th>تاخیر</th>
                             </thead>
                             <tbody>
                                 @forelse ($books as $book)
@@ -42,7 +42,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="10">No Record Found!</td>
+                                        <td colspan="10">موردی یافت نشد!</td>
                                     </tr>
                                 @endforelse
                             </tbody>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="offset-md-3 col-md-6">
-                    <h2 class="admin-heading text-center">Date Wise Book Issue Report</h2>
+                    <h2 class="admin-heading text-center">گزارش زمان امانت کتاب </h2>
                 </div>
             </div>
             <div class="row">
@@ -29,11 +29,11 @@
                         <table class="content-table">
                             <thead>
                                 <th>S.No</th>
-                                <th>Student Name</th>
-                                <th>Book Name</th>
-                                <th>Phone</th>
-                                <th>Email</th>
-                                <th>Issue Date</th>
+                                <th>دانشجو</th>
+                                <th>کتاب</th>
+                                <th>تلفن</th>
+                                <th>ایمیل</th>
+                                <th>زمان امانت</th>
                             </thead>
                             <tbody>
                                 @forelse ($books as $book)
@@ -47,7 +47,7 @@
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="10">No Record Found!</td>
+                                        <td colspan="10">موردی یافت نشد!</td>
                                     </tr>
                                 @endforelse
                             </tbody>

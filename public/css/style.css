@@ -1,7 +1,16 @@
+@font-face {
+    font-family: IRANSans;
+    src: url("../fonts/IRANSans/IRANSansWeb_Light.woff") format("woff");
+}
+
+* {
+    font-family: IRANSans, serif !important;
+    text-align: right !important;
+}
+
 /* COMMOM CSS */
 body{
     background: #F6F6F6;
-    font-family: 'Open Sans', sans-serif;
 }
 a,
 a:hover,
@@ -26,29 +35,29 @@ ul{
     padding: 34px 0;
 }
 .dropdown button{
-    background: #A00000;
+    background: #417690;
     border: none;
     opacity: 0.9;
 }
 .dropdown button:hover{
-    background: #A00000;
+    background: #417690;
     opacity: 0.9;
 }
 .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus, .show > .btn-secondary.dropdown-toggle:focus{
     box-shadow: none;
 }
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle{
-    background: #A00000;
+    background: #417690;
     opacity: 0.9;
 }
 .btn-secondary:focus, .btn-secondary.focus{
     border: none;
-    background: #A00000;
+    background: #417690;
     box-shadow: none;
     opacity: 0.9;
 }
 #menubar{
-    background: #A00000;
+    background: #417690;
     text-align: center;
     opacity: 0.9;
 }
@@ -58,7 +67,7 @@ ul{
 .menu li a{
     color: #fff;
     font-size: 16px;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-transform: uppercase;
     padding: 10px 13px;
     display: block;
@@ -66,11 +75,11 @@ ul{
 }
 .menu li a:hover{
     background: #fff;
-    color: #A00000;
+    color: #417690;
 }
 /* Footer Styling */
 #footer{
-    background: #A00000;
+    background: #417690;
     color: #fff;
     text-align: center;
     padding: 10px 0;
@@ -88,13 +97,13 @@ ul{
 #admin-content .admin-heading{
     color: #0E0E0E;
     font-size: 30px;
-    font-weight: 600;
+    /* font-weight: 600; */
     margin: 0 0 40px;
     position: relative;
 }
 #admin-content .admin-heading:after{
     content : "";
-    background: #A00000;
+    background: #417690;
     width: 100%;
     height: 3px;
     opacity: 0.9;
@@ -103,10 +112,10 @@ ul{
     bottom: -10px;
 }
 #admin-content .add-new{
-    background: #A00000;
+    background: #417690;
     color: #fff;
     font-size: 15px;
-    font-weight: 600;
+    /* font-weight: 600; */
     text-align: center;
     text-transform: uppercase;
     border: 2px solid transparent;
@@ -117,8 +126,8 @@ ul{
 }
 #admin-content .add-new:hover{
     background: #fff;
-    color: #A00000;
-    border: 2px solid #A00000;
+    color: #417690;
+    border: 2px solid #417690;
     opacity: 0.9;
 }
 #admin-content .content-table{
@@ -159,14 +168,14 @@ ul{
     margin-right: 8px;
 }
 .pagination li a{
-    background: #A00000;
+    background: #417690;
     color: #fff;
     font-size: 14px;
     padding: 6px 12px;
     opacity: 0.9;
 }
 .pagination li.active > a{
-    background: #A00000;
+    background: #417690;
     opacity: 0.7;
 }
 /* ADD AUTHOR */
@@ -177,7 +186,7 @@ ul{
 }
 .form-group label{
     color: #0E0E0E;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 .form-group .form-control{
     font-size: 14px;
@@ -194,7 +203,7 @@ ul{
     padding: 100px 0 0;
 }
 .border.border-danger{
-    border: 5px solid #A00000 !important;
+    border: 5px solid #417690 !important;
     opacity: 0.9;
     margin: 0 0 20px;
 }
@@ -206,7 +215,7 @@ ul{
 }
 .heading:after{
     content: "";
-    background: #A00000;
+    background: #417690;
     width: 100%;
     height: 2px;
     position: absolute;
@@ -254,7 +263,7 @@ ul{
 }
 
 .card-body{
-  background: #A00000;
+  background: #79aec8;
   opacity: 0.9;
   padding: 40px 20px;
 }
@@ -262,7 +271,7 @@ ul{
 .card-body .card-text{
   color: #fff;
   font-size: 40px;
-  font-weight: 600;
+  /* font-weight: 600; */
   line-height: 40px;
   margin: 0 0 10px;
 }

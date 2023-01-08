@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Update Student</h2>
+                    <h2 class="admin-heading">ویرایش دانشجو</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,7 +13,7 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Student Name</label>
+                            <label>دانشجو </label>
                             <input type="text" class="form-control" placeholder="Student Name" name="name"
                                 value="{{ $student->name }}" required>
                             @error('name')
@@ -23,7 +23,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Address</label>
+                            <label>آدرس</label>
                             <input type="text" class="form-control" placeholder="Address" name="address"
                                 value="{{ $student->address }}" required>
                             @error('address')
@@ -33,12 +33,12 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Gender</label>
+                            <label>جنسیت</label>
                             <select name="gender" class="form-control">
                                 @if ($student->gneder == 'male')
-                                    <option value="male" selected>Male</option>
+                                    <option value="male" selected>مرد</option>
                                 @else
-                                    <option value="female" selected>Female</option>
+                                    <option value="female" selected>زن</option>
                                 @endif
                             </select>
                             @error('gender')
@@ -48,7 +48,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Class</label>
+                            <label>کلاس</label>
                             <input type="text" class="form-control" placeholder="Class" name="class"
                                 value="{{ $student->class }}" required>
                             @error('class')
@@ -58,7 +58,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Age</label>
+                            <label>سن</label>
                             <input type="number" class="form-control" placeholder="Age" name="age"
                                 value="{{ $student->age }}" required>
                             @error('age')
@@ -68,7 +68,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label>تلفن</label>
                             <input type="phone" class="form-control" placeholder="Phone" name="phone"
                                 value="{{ $student->phone }}" required>
                             @error('phone')
@@ -78,7 +78,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Email</label>
+                            <label>ایمیل</label>
                             <input type="email" class="form-control" placeholder="Email" name="email"
                                 value="{{ $student->email }}" required>
                             @error('email')
@@ -87,7 +87,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="Update">
+                        <input type="submit" name="save" class="btn btn-danger" value="ویرایش">
                     </form>
                 </div>
             </div>

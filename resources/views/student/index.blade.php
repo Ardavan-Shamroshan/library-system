@@ -4,10 +4,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h2 class="admin-heading">All Students</h2>
+                    <h2 class="admin-heading">لیست دانشجو ها</h2>
                 </div>
                 <div class="offset-md-6 col-md-2">
-                    <a class="add-new" href="{{ route('student.create') }}">Add Student</a>
+                    <a class="add-new" href="{{ route('student.create') }}">اضافه کردن دانشجو</a>
                 </div>
             </div>
             <div class="row">
@@ -16,40 +16,40 @@
                     <table class="content-table">
                         <thead>
                             <th>S.No</th>
-                            <th>Student Name</th>
-                            <th>Gender</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>View</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>نام دانشجو</th>
+                            <th>جنسیت</th>
+                            <th>تلفن</th>
+                            <th>ایمیل</th>
+                            <th>نمایش</th>
+                            <th>ویرایش</th>
+                            <th>حذف</th>
                         </thead>
                         <tbody>
                             @forelse ($students as $student)
                                 <tr>
                                     <td class="id">{{ $student->id }}</td>
                                     <td>{{ $student->name }}</td>
-                                    <td class="text-capitalize">{{ $student->gender }}</td>
+                                    <td class="text-capitalize">{{ $student->gen }}</td>
                                     <td>{{ $student->phone }}</td>
                                     <td>{{ $student->email }}</td>
                                     <td class="view">
                                         <button data-sid='{{ $student->id }}>'
-                                            class="btn btn-primary view-btn">View</button>
+                                            class="btn btn-primary view-btn">نمایش</button>
                                     </td>
                                     <td class="edit">
-                                        <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">Edit</a>
+                                        <a href="{{ route('student.edit', $student) }}>" class="btn btn-success">ویرایش</a>
                                     </td>
                                     <td class="delete">
                                         <form action="{{ route('student.destroy', $student->id) }}" method="post"
                                             class="form-hidden">
-                                            <button class="btn btn-danger delete-student">Delete</button>
+                                            <button class="btn btn-danger delete-student">حذف</button>
                                             @csrf
                                         </form>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="8">No Students Found</td>
+                                    <td colspan="8">دانشجویی یافت نشد</td>
                                 </tr>
                             @endforelse
                         </tbody>
@@ -58,8 +58,8 @@
                     <div id="modal">
                         <div id="modal-form">
                             <table cellpadding="10px" width="100%">
-
                             </table>
+                            hii
                             <div id="close-btn">X</div>
                         </div>
                     </div>

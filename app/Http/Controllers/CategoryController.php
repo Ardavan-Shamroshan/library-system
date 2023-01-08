@@ -18,7 +18,6 @@ class CategoryController extends Controller
         return view('category.index', [
             'categories' => category::Paginate(5)
         ]);
-
     }
 
     /**
@@ -79,7 +78,10 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        category::find($id)->delete();
+
+        $category = category::find($id);
+        $category->books()->delete();
+        $category->delete();
         return redirect()->route('categories');
     }
 }

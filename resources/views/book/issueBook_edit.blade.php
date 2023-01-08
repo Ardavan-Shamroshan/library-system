@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Return Book</h2>
+                    <h2 class="admin-heading">برگشت کتاب</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,43 +13,43 @@
                     <div class="yourform">
                         <table cellpadding="10px" width="90%" style="margin: 0 0 20px;">
                             <tr>
-                                <td>StudentName: </td>
+                                <td>نام دانشجو: </td>
                                 <td><b>{{ $book->student->name }}</b></td>
                             </tr>
                             <tr>
-                                <td>Book Name : </td>
+                                <td>نام کتاب : </td>
                                 <td><b>{{ $book->book->name }}</b></td>
                             </tr>
                             <tr>
-                                <td>Phone : </td>
+                                <td>تلفن : </td>
                                 <td><b>{{ $book->student->phone }}</b></td>
                             </tr>
                             <tr>
-                                <td>Email : </td>
+                                <td>ایمیل : </td>
                                 <td><b>{{ $book->student->email }}</b></td>
                             </tr>
                             <tr>
-                                <td>Issue Date : </td>
+                                <td>زمان امانت : </td>
                                 <td><b>{{ $book->issue_date->format('d M, Y') }}</b></td>
                             </tr>
                             <tr>
-                                <td>Return Date : </td>
+                                <td>زمان برگشت : </td>
                                 <td><b>{{ $book->return_date->format('d M, Y') }}</b></td>
                             </tr>
                             @if ($book->issue_status == 'Y')
                                 <tr>
-                                    <td>Status</td>
-                                    <td><b>Returned</b></td>
+                                    <td>وضعیت</td>
+                                    <td><b>برگشت داده شده</b></td>
                                 </tr>
                                 <tr>
-                                    <td>Returned On</td>
+                                    <td>زمان برگشت</td>
                                     <td><b>{{ $book->return_day->format('d M, Y') }}</b></td>
                                 </tr>
                             @else
                                 @if (date('Y-m-d') > $book->return_date->format('d-m-Y'))
                                     <tr>
-                                        <td>Fine</td>
-                                        <td>Rs. {{ $fine }}</td>
+                                        <td>خوب</td>
+                                        <td>ریال. {{ $fine }}</td>
                                     </tr>
                                 @endif
                             @endif
@@ -57,7 +57,7 @@
                         @if ($book->issue_status == 'N')
                             <form action="{{ route('book_issue.update', $book->id) }}" method="post" autocomplete="off">
                                 @csrf
-                                <input type='submit' class='btn btn-danger' name='save' value='Return Book'>
+                                <input type='submit' class='btn btn-danger' name='save' value='برگشت دادن'>
                             </form>
                         @endif
                     </div>

@@ -29,7 +29,7 @@ Route::get('/', function () {
 })->middleware('guest');
 Route::post('/', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::post('/Change-password', [LoginController::class, 'changePassword'])->name('change_password');
+Route::post('/Change-password', [LoginController::class, 'changePassword'])->name('change-password');
 
 
 Route::middleware('auth')->group(function () {
@@ -97,6 +97,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/reports/monthly-Wise', [ReportsController::class, 'generate_month_wise_report'])->name('reports.month_wise_generate');
     Route::get('/reports/not-returned', [ReportsController::class, 'not_returned'])->name('reports.not_returned');
 
-    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::get('/settings', [SettingsController::class, 'index'])->name('home.settings');
     Route::post('/settings', [SettingsController::class, 'update'])->name('settings');
 });

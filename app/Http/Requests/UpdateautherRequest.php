@@ -24,7 +24,7 @@ class UpdateautherRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|unique:authers,name,except,id'
+            'name'=>'required|unique:authers,id'
         ];
     }
 }

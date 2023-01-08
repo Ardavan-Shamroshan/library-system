@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\auther;
+use App\Models\category;
+use App\Models\publisher;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class bookFactory extends Factory
@@ -15,9 +18,9 @@ class bookFactory extends Factory
     {
         return [
             'name' => $this->faker->sentence(4),
-            'category_id' => random_int(1,10),
-            'auther_id' => random_int(1,10),
-            'publisher_id' => random_int(1,10),
+            'category_id' => category::factory(),
+            'auther_id' => auther::factory(),
+            'publisher_id' => publisher::factory(),
             'status' => 'Y'
         ];
     }

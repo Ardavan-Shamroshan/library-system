@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="admin-heading">Update Book</h2>
+                    <h2 class="admin-heading">ویرایش کتاب</h2>
                 </div>
             </div>
             <div class="row">
@@ -13,7 +13,7 @@
                         autocomplete="off">
                         @csrf
                         <div class="form-group">
-                            <label>Book Name</label>
+                            <label>نام کتاب</label>
                             <input type="text" class="form-control @error('name') isinvalid @enderror"
                                 placeholder="Book Name" name="name" value="{{ $book->name }}" >
                             @error('name')
@@ -23,10 +23,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Category</label>
+                            <label>دسته بندی</label>
                             <select class="form-control @error('category_id') isinvalid @enderror " name="category_id"
                                 >
-                                <option value="">Select Category</option>
+                                <option value="">انتخاب دسته بندی</option>
                                 @foreach ($categories as $category)
                                     @if ($category->id == $book->category_id)
                                         <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
@@ -42,9 +42,9 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Author</label>
+                            <label>نویسنده</label>
                             <select class="form-control @error('auther_id') isinvalid @enderror " name="author_id">
-                                <option value="">Select Author</option>
+                                <option value="">انتخاب نویسنده</option>
                                 @foreach ($authors as $auther)
                                     @if ($auther->id == $book->auther_id)
                                         <option value="{{ $auther->id }}" selected>{{ $auther->name }}</option>
@@ -60,10 +60,10 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label>Publisher</label>
+                            <label>ناشر</label>
                             <select class="form-control @error('publisher_id') isinvalid @enderror "
                                 name="publisher_id" >
-                                <option value="">Select Publisher</option>
+                                <option value="">انتخاب ناشر</option>
                                 @foreach ($publishers as $publisher)
                                     @if ($publisher->id == $book->publisher_id)
                                         <option value="{{ $publisher->id }}" selected>{{ $publisher->name }}</option>
@@ -78,7 +78,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <input type="submit" name="save" class="btn btn-danger" value="Update" >
+                        <input type="submit" name="save" class="btn btn-danger" value="ویرایش" >
                     </form>
                 </div>
             </div>
